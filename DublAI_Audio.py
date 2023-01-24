@@ -4,7 +4,7 @@ import numpy as np
 from sklearn.externals import joblib
 
 # Carregando o modelo treinado
-model = joblib.load("trained_model.pkl")
+model = joblib.load("modelo.pkl")
 
 # Inicializando o reconhecedor de voz
 r = sr.Recognizer()
@@ -25,6 +25,6 @@ audio = audio.reshape(1, -1)
 predicted_audio = model.predict(audio)
 
 # Salvando o áudio dublado
-librosa.output.write_wav("dubbed_audio.wav", predicted_audio, sr)
+librosa.output.write_wav("dublado.wav", predicted_audio, sr)
 
 print("Áudio dublado salvo com sucesso!")

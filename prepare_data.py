@@ -8,13 +8,13 @@ filenames_original = []
 filenames_dublado = []
 
 # Carregando arquivos de treinamento
-for file in os.listdir("path/to/original_films"):
+for file in os.listdir("original"):
     if file.endswith(".mp4"):
-        filenames_original.append(os.path.join("path/to/original_films", file))
+        filenames_original.append(os.path.join("original", file))
 
-for file in os.listdir("path/to/dublado_films"):
+for file in os.listdir("dublado"):
     if file.endswith(".mp4"):
-        filenames_dublado.append(os.path.join("path/to/dublado_films", file))
+        filenames_dublado.append(os.path.join("dublado", file))
 
 # Tokenizando os arquivos de treinamento
 samples_original = []

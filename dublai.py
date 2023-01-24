@@ -8,12 +8,12 @@ def prepare_data():
     # Carregando arquivos de treinamento
     filenames_pt = []
     filenames_en = []
-    for file in os.listdir("path/to/portuguese_films"):
+    for file in os.listdir("dublado"):
         if file.endswith(".mp4"):
-            filenames_pt.append(os.path.join("path/to/portuguese_films", file))
-    for file in os.listdir("path/to/english_films"):
+            filenames_pt.append(os.path.join("dublado", file))
+    for file in os.listdir("original"):
         if file.endswith(".mp4"):
-            filenames_en.append(os.path.join("path/to/english_films", file))
+            filenames_en.append(os.path.join("original", file))
 
     # Tokenizando os arquivos de treinamento
     samples_pt = []
