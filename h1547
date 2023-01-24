@@ -1,0 +1,19 @@
+import numpy as np
+from keras.layers import Input, LSTM, Dense
+from keras.models import Model
+from keras.optimizers import Adam
+
+X_train = np.load("X_train.npy")
+X_test = np.load("X_test.npy")
+y_train = np.load("y_train.npy")
+y_test = np.load("y_test.npy")
+
+inputs = Input(shape=(None, X_train.shape[-1]))
+lstm = LSTM(256, return_sequences=True)(inputs)
+lstm = LSTM(256)(lstm)
+dense = Dense(y_train.shape[-1])(lstm)
+
+model = Model(inputs, dense)
+model.compile(loss="mean_squared_error", optimizer=Adam())
+model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
+model.save("model.h5")
