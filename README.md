@@ -41,15 +41,15 @@ Você pode instalar as dependências necessárias executando o seguinte comando:
 
 ### Etapa 1: Preparar os arquivos de treinamento
 - Baixe ou colete os arquivos de treinamento (filmes com áudio em duas línguas diferentes) e coloque-os em pastas separadas.
-- Execute o script "prepare_data.py" para tokenizar os arquivos e prepará-los para o treinamento do modelo.
+- Execute o script `prepare_data.py` para tokenizar os arquivos e prepará-los para o treinamento do modelo.
 
 ### Etapa 2: Treinar o modelo
-- Execute o script "train_model.py" para treinar o modelo com os arquivos de treinamento preparados anteriormente.
+- Execute o script `train_model.py` para treinar o modelo com os arquivos de treinamento preparados anteriormente.
 - Este processo pode levar algumas horas, dependendo do tamanho dos arquivos de treinamento e da configuração do seu computador.
 
 ### Etapa 3: Utilizar o modelo para dublar um vídeo
 - Selecione o vídeo a ser dublado e o áudio original (em outra língua)
-- Execute o script "dub_video.py" passando como parâmetros o caminho do vídeo e do áudio original.
+- Execute o script `dub_video.py` passando como parâmetros o caminho do vídeo e do áudio original.
 - O script irá sincronizar os lábios e gerar um novo vídeo com o áudio dublado.
 
 
