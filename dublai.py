@@ -48,18 +48,16 @@ def train_model():
 
 @app.route('/dub_video', methods=['POST'])
 def dub_video():
-    
-video, sr = librosa.load("path/to/video.mp4")
-video = np.expand_dims(video, axis=0)
-dubbed_audio = model.predict(video)
-librosa.output.write_wav("dubbed_video.wav", dubbed_audio[0], sr)
-
-
-video = mp.VideoFileClip("path/to/video.mp4")
-audio = mp.AudioFileClip("dubbed_video.wav")
-video = video.set_audio(audio)
-video.write_videofile("dubbed_video.mp4")
-return jsonify({"message": "Vídeo dublado com sucesso!"})
+    model = load_model("dub_model.h5")
+    video, sr = librosa.load(request.json['video_path'])
+    video = np.expand_dims(video, axis=0)
+    dubbed_audio = model.predict(video)
+    librosa.output.write_wav(request.json['output_path'], dubbed_audio[0], sr)
+    video = mp.VideoFileClip(request.json['video_path'])
+    audio = mp.AudioFileClip(request.json['output_path'])
+    video = video.set_audio(audio)
+    video.write_videofile(request.json['output_path'])
+    return jsonify({"message": "Vídeo dublado com sucesso!"})
 
 if name == 'main':
 app.run(debug=True)
