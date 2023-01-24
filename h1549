@@ -1,0 +1,14 @@
+from moviepy.editor import VideoFileClip, AudioFileClip
+
+
+video = VideoFileClip("path/to/original_video.mp4")
+audio_dubbed = AudioFileClip("path/to/dubbed_audio.mp3")
+
+
+video = video.set_audio(audio_dubbed)
+
+
+video = video.lipsync(audio_dubbed)
+
+
+video.write_videofile("path/to/dubbed_and_synced_video.mp4")
