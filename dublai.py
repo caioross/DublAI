@@ -60,3 +60,6 @@ audio = mp.AudioFileClip("dubbed_video.wav")
 video = video.set_audio(audio)
 video.write_videofile("dubbed_video.mp4")
 return jsonify({"message": "Vídeo dublado com sucesso!"})
+
+if name == 'main':
+app.run(debug=True)
