@@ -1,4 +1,16 @@
-A DublAI é uma ferramenta de dublagem e traducao natural usando inteligencia artificial para recriar a voz original e sua entonacoes e nuances de forma a se tornar uma ferramenta com aplicacoes de amplo espectro
+### Preciso da Sua Ajuda DEV! Sozinho não consigo terminar ela! Vamos juntos criar essa ferramenta que vai mudar o mundo!
+
+A DublAI é uma ferramenta de dublagem e traducao natural usando inteligencia artificial para recriar a voz original e sua entonacoes e nuances de forma a se tornar uma ferramenta com aplicacoes de amplo espectro tais como:
+
+Governos internacionais - traduzindo conversas com a voz original e quebrando barreiras linguisticas. Rodando em tempo real com apenas um curto delay ela é capaz de acompanhar uma conversa de forma instantanea. Governos que falam diferentes linguas passariam a se ckmunicar de forma mais clara e tranquila.
+
+Canais de TV e noticias - permite manter a originalidade da noticia mas ainda permitindo que qualquer pessoa possa entender sem a necessidade de legendas. DublAI, separa o audio das vozes, traduz e dubla na nova lingua com extrema naturalidade e depois as insere novamente ao video usando sincronizacao labial.
+
+Estudios de dublagem - DublAI foi desenhada especialmente para esta tarefa, permite dublar um filme inteiro com centenas de personagens respeitando suas vozes e caracteristicas de fala com naturalidade.
+
+Educacao - permitindo ter uma maior imersao da lingua, funciona como um espelho, mostrando como falar corretamente.
+
+Comunicacao integrada - usando uma api veloz é possivel integrar DublAI em comunicadores como telegran e whatsapp, que dublar audios em qualquer idioma listado em nossa documentacao. ( essa funcao nao trabalha ainda com videos)
 
 ## Instruções de uso:
 
