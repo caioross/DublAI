@@ -31,7 +31,7 @@ Para utilizar Hoshi Sato, é necessário ter as seguintes dependências instalad
 
 Você pode instalar as dependências necessárias executando o seguinte comando:
 
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 ## Uso
 
@@ -44,7 +44,7 @@ Para utilizar Hoshi Sato, você precisa especificar o idioma de origem e o idiom
 
 Exemplo de uso:
 
-python hoshi_sato.py --src_lang pt --tgt_lang en --src_file my_video.mp4
+`python hoshi_sato.py --src_lang pt --tgt_lang en --src_file my_video.mp4`
 
 ## Contribuindo
 
@@ -68,4 +68,4 @@ Lembre-se de substituir os parâmetros entre colchetes pelos valores desejados.
 
 ## Licença
 
-Hoshi Sato é distribuído sob a licença [MIT](https://github.com/caioross/HoshiSato/bl
+Hoshi Sato é distribuído sob a licença [MIT](https://github.com/caioross/HoshiSato/bl)
