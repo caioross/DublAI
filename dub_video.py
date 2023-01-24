@@ -3,12 +3,17 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 import os
 import re
+import googletrans
 
 # Carregando o modelo treinado
 model = load_model("dub_model.h5")
 
 # Carregando o vídeo a ser dublado
 video, sr = librosa.load("path/to/video.mp4")
+
+# Traduzindo o texto
+translator = googletrans.Translator()
+translated_text = translator.translate(text, dest='pt').text
 
 # Pre-processamento dos dados
 video = np.expand_dims(video, axis=0)
