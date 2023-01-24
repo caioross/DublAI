@@ -31,7 +31,6 @@ Comunicacao integrada - usando uma api veloz é possivel integrar DublAI em comu
 
 
 ## Contribuindo
-### Preciso da Sua Ajuda DEV! Sozinho não consigo terminar ela! Vamos juntos criar essa ferramenta que vai mudar o mundo!
 
 Contribuições são sempre bem-vindas! Por favor, leia nossas [diretrizes de contribuição](https://github.com/caioross/DublAI/blob/master/CONTRIBUTING.md) antes de começar a contribuir.
 
