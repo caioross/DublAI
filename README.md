@@ -21,3 +21,51 @@ Ela trabalha dublando em qualquer direcao. De Ingles para portugues, ou de portu
 A ferramenta nao armazena dados dos arquivos dublados, novas versoes do modelo serao lancadas com melhorias e aperfeicoamentos. 
 
 A ferramenta trabalha completamente de forma autonoma nao dependendo de nenhum operador do sistema, apenas um ambiente aws bem configurado.
+
+## Instalação
+
+Para utilizar Hoshi Sato, é necessário ter as seguintes dependências instaladas:
+- Python 3.6 ou superior
+- Tensorflow 2.0 ou superior
+- Librosa 0.8.0 ou superior
+
+Você pode instalar as dependências necessárias executando o seguinte comando:
+
+pip install -r requirements.txt
+
+## Uso
+
+Hoshi Sato se apresenta de 3 formas:
+- API: para integração com comunicadores, rádios, notícias, etc. Trabalha apenas com áudio.
+- Web: dubla qualquer filme de forma independente e autônoma.
+- App: dubla qualquer conversa quase que instantaneamente, podendo ser usada em palestras, conversas ao vivo, reuniões, etc.
+
+Para utilizar Hoshi Sato, você precisa especificar o idioma de origem e o idioma de destino, além do arquivo de áudio ou vídeo que deseja dublar.
+
+Exemplo de uso:
+
+python hoshi_sato.py --src_lang pt --tgt_lang en --src_file my_video.mp4
+
+## Contribuindo
+
+Contribuições são sempre bem-vindas! Por favor, leia nossas [diretrizes de contribuição](https://github.com/caioross/HoshiSato/blob/master/CONTRIBUTING.md) antes de começar a contribuir.
+
+Até o momento, o projeto já possui as seguintes funcionalidades implementadas:
+- Tokenização de áudios e vídeos
+- Treinamento de modelo de IA com dados de filmes em português e inglês
+- Dublagem de áudio com a voz original simulada em outro idioma
+- Integração com aplicativos de comunicação (API)
+- Interface Web para dublagem de filmes
+- Interface App para dublagem de conversas em tempo real
+
+Para rodar o projeto, siga os seguintes passos:
+1. Clone o repositório: `git clone https://github.com/caioross/HoshiSato.git`
+2. Entre na pasta do projeto: `cd HoshiSato`
+3. Instale as dependências: `pip install -r requirements.txt`
+4. Execute o script principal: `python hoshi_sato.py --src_lang [idioma_origem] --tgt_lang [idioma_destino] --src_file [arquivo_de_audio_ou_video]`
+
+Lembre-se de substituir os parâmetros entre colchetes pelos valores desejados.
+
+## Licença
+
+Hoshi Sato é distribuído sob a licença [MIT](https://github.com/caioross/HoshiSato/bl
