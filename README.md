@@ -33,18 +33,25 @@ Você pode instalar as dependências necessárias executando o seguinte comando:
 
 `pip install -r requirements.txt`
 
-## Uso
+## Instruções de uso:
 
-DublAI se apresenta de 3 formas:
-- API: para integração com comunicadores, rádios, notícias, etc. Trabalha apenas com áudio.
-- Web: dubla qualquer filme de forma independente e autônoma.
-- App: dubla qualquer conversa quase que instantaneamente, podendo ser usada em palestras, conversas ao vivo, reuniões, etc.
+### Pré-requisitos:
+- Python 3.7 ou superior
+- Bibliotecas listadas no arquivo requirements.txt
 
-Para utilizar DublAI, você precisa especificar o idioma de origem e o idioma de destino, além do arquivo de áudio ou vídeo que deseja dublar.
+### Etapa 1: Preparar os arquivos de treinamento
+- Baixe ou colete os arquivos de treinamento (filmes com áudio em duas línguas diferentes) e coloque-os em pastas separadas.
+- Execute o script "prepare_data.py" para tokenizar os arquivos e prepará-los para o treinamento do modelo.
 
-Exemplo de uso:
+### Etapa 2: Treinar o modelo
+- Execute o script "train_model.py" para treinar o modelo com os arquivos de treinamento preparados anteriormente.
+- Este processo pode levar algumas horas, dependendo do tamanho dos arquivos de treinamento e da configuração do seu computador.
 
-`python DublAI.py --src_lang pt --tgt_lang en --src_file my_video.mp4`
+### Etapa 3: Utilizar o modelo para dublar um vídeo
+- Selecione o vídeo a ser dublado e o áudio original (em outra língua)
+- Execute o script "dub_video.py" passando como parâmetros o caminho do vídeo e do áudio original.
+- O script irá sincronizar os lábios e gerar um novo vídeo com o áudio dublado.
+
 
 ## Contribuindo
 
