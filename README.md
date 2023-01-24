@@ -22,17 +22,6 @@ A ferramenta nao armazena dados dos arquivos dublados, novas versoes do modelo s
 
 A ferramenta trabalha completamente de forma autonoma nao dependendo de nenhum operador do sistema, apenas um ambiente aws bem configurado.
 
-## Instalação
-
-Para utilizar, é necessário ter as seguintes dependências instaladas:
-- Python 3.6 ou superior
-- Tensorflow 2.0 ou superior
-- Librosa 0.8.0 ou superior
-
-Você pode instalar as dependências necessárias executando o seguinte comando:
-
-`pip install -r requirements.txt`
-
 ## Instruções de uso:
 
 ### Pré-requisitos:
