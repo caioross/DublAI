@@ -1,0 +1,48 @@
+import os
+import youtube_dl
+import librosa
+from sklearn.model_selection import train_test_split
+from keras.models import Sequential
+from keras.layers import LSTM, Dense
+
+# Configurações do youtube-dl
+ydl_opts = {
+    'format': 'bestaudio/best',
+    'outtmpl': '%(id)s.%(ext)s',
+    'noplaylist': True,
+    'nocheckcertificate': True,
+    'postprocessors': [{
+        'key': 'FFmpegExtractAudio',
+        'preferredcodec': 'wav',
+        'preferredquality': '192',
+    }],
+}
+
+# Lista de URLs de vídeos do YouTube (inglês e português)
+video_urls = [
+    'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    'https://www.youtube.com/watch?v=jofNR_WkoCE',
+    'https://www.youtube.com/watch?v=U4j_vL_zdE4',
+    'https://www.youtube.com/watch?v=pxEKOxoUv0c',
+    'https://www.youtube.com/watch?v=ktvTqknDobU',
+]
+
+# Baixando e processando os vídeos do YouTube
+samples = []
+for url in video_urls:
+    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+        ydl.download([url])
+    audio_path = ydl.prepare_filename(url).rstrip('.webm') + '.wav'
+    audio, sr = librosa.load(audio_path)
+    samples.append(audio)
+    os.remove(audio_path)
+
+# Dividindo os dados em treino e teste
+X_train, X_test, y_train, y_test = train_test_split(samples[:2], samples[2:], test_size=0.2, random_state=42)
+
+# Criando e treinando o modelo
+model = Sequential()
+model.add(LSTM(256, input_shape=(X_train.shape[1], X_train.shape[2])))
+model.add(Dense(y_train.shape[1]))
+model.compile(optimizer='adam', loss='mse')
+model.fit(X_train, y_train, epochs
