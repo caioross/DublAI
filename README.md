@@ -68,4 +68,4 @@ Lembre-se de substituir os parâmetros entre colchetes pelos valores desejados.
 
 ## Licença
 
-Hoshi Sato é distribuído sob a licença [MIT](https://github.com/caioross/HoshiSato/bl)
+Hoshi é distribuído sob a licença de teste Beta para uma comunidade Restrita de desenvolvedores.
