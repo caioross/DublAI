@@ -1,0 +1,19 @@
+import librosa
+import moviepy.editor as mp
+import numpy as np
+from keras.models import load_model
+
+X_train = np.load("X_train.npy")
+X_test = np.load("X_test.npy")
+y_train = np.load("y_train.npy")
+y_test = np.load("y_test.npy")
+model = load_model("path/to/trained_model.h5")
+clip = mp.VideoFileClip("path/to/original_film.mp4")
+audio = clip.audio.to_soundarray()
+processed_audio = librosa.feature.mfcc(audio, sr=44100)
+processed_audio = np.expand_dims(processed_audio, axis=0)
+predicted_audio = model.predict(processed_audio)
+predicted_audio = np.squeeze(predicted_audio, axis=0)
+predicted_audio = librosa.feature.inverse.mfcc_to_audio(predicted_audio, sr=44100)
+clip.audio = mp.AudioClip(predicted_audio, fps=44100)
+clip.write_videofile("path/to/dubbed_film.mp4")
