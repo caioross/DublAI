@@ -1,4 +1,4 @@
-!(https://github.com/caioross/DublAI/blob/main/header.png?raw=true)
+![Screenshot](header.png)
 
 A DublAI é uma ferramenta de dublagem e traducao natural usando inteligencia artificial para recriar a voz original e sua entonacoes e nuances de forma a se tornar uma ferramenta com aplicacoes de amplo espectro tais como:
 
