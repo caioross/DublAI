@@ -32,6 +32,7 @@ Comunicacao integrada - usando uma api veloz é possivel integrar DublAI em comu
 - O script irá sincronizar os lábios e gerar um novo vídeo com o áudio dublado.
 
 ## Funcionamento
+```mermaid
 graph TD;
     A[Áudio Original] --> B[Extração de Características];
     B --> C[Codificação com Encoder];
@@ -46,7 +47,7 @@ graph TD;
     style E fill:#F9F,stroke:#333,stroke-width:4px;
     style F fill:#F9F,stroke:#333,stroke-width:4px;
     style G fill:#F9F,stroke:#333,stroke-width:4px;
-
+```
 
 ## Contribuindo
 
