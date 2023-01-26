@@ -31,6 +31,22 @@ Comunicacao integrada - usando uma api veloz é possivel integrar DublAI em comu
 - Execute o script `dub_video.py` passando como parâmetros o caminho do vídeo e do áudio original.
 - O script irá sincronizar os lábios e gerar um novo vídeo com o áudio dublado.
 
+## Funcionamento
+graph TD;
+    A[Áudio Original] --> B[Extração de Características];
+    B --> C[Codificação com Encoder];
+    C --> D[Decodificação com Decoder];
+    D --> E[Sincronização de Lábios com Deepfake];
+    E --> F[Dublagem Sincronizada];
+    F --> G[Vídeo com Dublagem];
+    style A fill:#F9F,stroke:#333,stroke-width:4px;
+    style B fill:#F9F,stroke:#333,stroke-width:4px;
+    style C fill:#F9F,stroke:#333,stroke-width:4px;
+    style D fill:#F9F,stroke:#333,stroke-width:4px;
+    style E fill:#F9F,stroke:#333,stroke-width:4px;
+    style F fill:#F9F,stroke:#333,stroke-width:4px;
+    style G fill:#F9F,stroke:#333,stroke-width:4px;
+
 
 ## Contribuindo
 
